@@ -6,9 +6,11 @@ services:
     container_name: library-builder
     volumes:
       - lib:/usr/local/lib
+      - include:/usr/local/include
 
 volumes:
   lib:
+  include:
 
 networks:
   apt_cache:

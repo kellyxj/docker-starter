@@ -1,18 +1,27 @@
 services:
-  build_libraries:
+  build:
     networks:
       - apt_cache
-    image: library-builder
-    container_name: library-builder
+    image: builder
+    container_name: builder
     volumes:
       - lib:/usr/local/lib
       - include:/usr/local/include
+      - src:/root/sources
+      - build:/root/build
 
 volumes:
   lib:
     name: lib
+    external: true
   include:
     name: include
+    external: true
+  src:
+    name: src
+    external: true
+  build:
+    name: build
 
 networks:
   apt_cache:

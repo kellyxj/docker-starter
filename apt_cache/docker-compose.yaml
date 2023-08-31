@@ -15,6 +15,7 @@ services:
 
 volumes:
   apt-cacher-ng:
+    name: apt-cacher-ng
 
 networks:
   apt_cache:

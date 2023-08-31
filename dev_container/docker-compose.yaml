@@ -12,6 +12,7 @@ services:
 
 volumes:
   src:
+    name: src
 
 networks:
   apt_cache:

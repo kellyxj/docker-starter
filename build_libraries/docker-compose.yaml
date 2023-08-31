@@ -1,0 +1,16 @@
+services:
+  build_libraries:
+    networks:
+      - apt_cache
+    image: library-builder
+    container_name: library-builder
+    volumes:
+      - lib:/usr/local/lib
+
+volumes:
+  lib:
+
+networks:
+  apt_cache:
+    name: apt_cache
+    external: true

@@ -1,7 +1,5 @@
 services:
   build:
-    networks:
-      - apt_cache
     image: builder
     container_name: builder
     volumes:
@@ -22,8 +20,3 @@ volumes:
     external: true
   build:
     name: build
-
-networks:
-  apt_cache:
-    name: apt_cache
-    external: true

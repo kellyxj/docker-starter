@@ -1,7 +1,5 @@
 services:
   dev_container:
-    networks:
-      - apt_cache
     image: dev-container
     container_name: dev-container
     ports:
@@ -13,8 +11,3 @@ services:
 volumes:
   src:
     name: src
-
-networks:
-  apt_cache:
-    name: apt_cache
-    external: true

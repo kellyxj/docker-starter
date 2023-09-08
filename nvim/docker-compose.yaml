@@ -1,0 +1,6 @@
+services:
+  nvim:
+    image: nvim
+    container_name: nvim
+    volumes: 
+      - "${SRC}:/root/workdir"

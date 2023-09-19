@@ -1,0 +1,6 @@
+services:
+  docker_in_docker:
+    image: docker_in_docker
+    container_name: docker_in_docker
+    ports:
+      - "2022:22"
